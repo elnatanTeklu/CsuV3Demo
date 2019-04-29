@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AskCody v0.3 Demo</title>
+    <meta name="description" content="A simple and beautiful Vue chat component backend agnostic."/>
+    <meta name="keywords" content="vue, vuejs, chat, beautiful.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      
+      body{
+          background-attachment: fixed;
+          background-image: url(images/clockTower.jpg);
+          background-position: center center;
+          background-repeat: no-repeat no-repeat;
+          background-size: cover;
+          box-sizing: border-box;
+          color: #333;
+          font-family: "Roboto Light",Arial,Helvetica,sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 1.42857;
+          margin: 0;
+      }
+      
+      .form{
+          background-color: #fff;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 5%;
+          max-width: 450px;
+          padding: 16px;
+          margin-bottom: 4%;
+      }
+      
+      .img-header{
+          background-image: url(images/csu-logo__header.png);
+          background-position: center center;
+          background-repeat: no-repeat no-repeat;
+          background-size: cover;
+          border-width: 0;
+          box-sizing: border-box;
+          display: block;
+          height: 75px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 100%;
+          vertical-align: middle;
+      }
+      
+      .login-message__header{
+          box-sizing: border-box;
+          font-size: 36px;
+          font-weight: 500;
+          line-height: 1.1;
+          margin: 20px 0 10px;
+          text-align: center;
+      }
+      
+      
+      .form-container__uppper{
+          box-sizing: border-box;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      
+      .input-username{
+          box-sizing: border-box;
+          font-size: 20px;
+          font-weight: 10;
+          line-height: 1.1;
+          width: 100%;
+          margin: 20px 0 10px;
+          text-align: left;
+      }
+      
+      .input-password{
+          box-sizing: border-box;
+          font-size: 20px;
+          font-weight: 10;
+          line-height: 1.1;
+          width: 100%;
+          margin: 20px 0 10px;
+          text-align: left;
+      }
+      
+      .btn-signIn{
+          -webkit-appearance: button;
+          background-color: #002455;
+          border: 1px solid #adadad;
+          border-radius: 4px;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          display: block;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.42857;
+          margin: 20px 0 10px;
+          padding: 6px 12px;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          touch-action: manipulation;
+          user-select: none;
+          vertical-align: middle;
+          white-space: nowrap;
+          width: 100%;
+          z-index: 1;
+      }
+      
+      .form-container__lower{
+          box-sizing: border-box;
+          display: inline-block;
+          float: left;
+          margin-bottom: 0;
+          min-height: 1px;
+          padding-left: 15px;
+          padding-right: 15px;
+          position: relative;
+          vertical-align: middle;
+          width: 100%;
+      }
+      
+      
+      .security-message{
+          box-sizing: border-box;
+          color: #891919;
+          font-size: 85%;
+          margin: 0 0 10px;
+          text-align: center;
+      }
+      
+      .img-url{
+          background-image: url(images/img-url.png);
+          /* background-position: center center; */
+          background-repeat: no-repeat;
+          /* background-size: cover; */
+          border-width: 0;
+          box-sizing: border-box;
+          display: block;
+          height: 36px!important;
+          margin-left: 10%;
+          margin-right: 10%;
+          max-width: 100%;
+          vertical-align: middle;
+          margin-bottom: 5%;
+          
+      }
+      
+      .form-container__links{
+          box-sizing: border-box;
+          margin: 0 0 10px;
+          text-align: center;
+      }
+      
+      a{
+          background-color: transparent;
+          box-sizing: border-box;
+          color: #23527c;
+          outline: 0;
+          text-decoration: underline;
+      }
+      
+      .link1{
+         
+          margin-left: 20%;
+      }
+      
+      .link2{
+         
+          margin-left: 20.3%; 
+      }
+      
+      .link3{
+          margin-left: 21%; 
+      }
+      
+      .message-note{
+          box-sizing: border-box;
+          font-size: 85%;
+          margin: 0 0 10px;
+          text-align: center;
+      }
+      
+      .message-bottom{
+          box-sizing: border-box;
+          font-size: 85%;
+          margin: 0 0 10px;
+          text-align: center;
+      }
+      
+      iframe{
+          border: 0;
+      }
+      
+      .frame{
+          position: fixed;
+          bottom: 0;
+          margin-left: 60%;
+          width: 100%;
+          /* color: white;
+          text-align: center; */
+      }
+      
+      </style>
+      
+      
+      <body>
+      
+        <div class="container">
+      
+          <div class="form">
+      
+            <div class="img-header">
+      
+            </div>
+      
+      
+            <div class="login-message__header"> OneCSU Login </div>
+      
+      
+      
+            <div class="form-container__upper">
+      
+      
+              <input type="text" class="input-username" placeholder="username">
+      
+              <input type="text" class="input-password" placeholder="password">
+      
+              <button class="btn-signIn"> sign In</button>
+      
+      
+              <div class="form-container__lower">
+      
+      
+                <div class="security-message">
+      
+                  <p>
+                    For security reasons, please always verify that this login page's URL begins with the following before attempting to login.
+                  </p>
+      
+                </div>
+      
+                <div class="img-url"> </div>
+      
+              </div>
+      
+              <div class="form-containter__links">
+                <a class="link1" href="#">Forgot your OneCSU username?</a>
+                <a class="link2" href="#">Forgot your OneCSU password?</a>
+                <a class="link3" href="#">Logging in for the first time?</a>
+      
+              </div>
+      
+      
+              <div class="message-note">
+                <p>
+                  <span style="color: rgb(17, 17, 17)"> Note: </span> Your username should
+                  <span style="color: rgb(0, 0, 0)"> not </span> include "@columbusstate.edu" when attempting to log in.</p>
+              </div>
+      
+      
+              <div class="message-bottom">
+                <p>Please do not bookmark this page. The unique login session generated by this page is only valid for 15 minutes
+                  and will cause an authentication error when attempting to log in if the login session expires. If this page is
+                  open for more than 15 minutes, please close this page and navigate to the service again.
+      
+                </p>
+              </div>
+      
+            </div>
+      
+      
+          </div>
+      
+    <div id="app"></div>
+    <script src="build.js"></script>
+  </body>
+</html>
